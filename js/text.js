@@ -16,13 +16,13 @@ var text = {
   help: function () {
     return this.helpGreeting() + '\n\n' +
 		'Try one of these:\n\n' +
-		'\twhoareyou: curious?\n\n' +
-		"\texp: previous experience and things I've built\n\n" +
-		'\tnow: what I am doing right now\n\n' +
-		'\tbooks: my personal recommendations\n\n' +
-		'\teggs: easter eggs\n\n' +
-    '\tthanks: people\n\n' +
-		'\tcontact: coffee, maybe?\n'
+		'\t<\a>whoareyou</\a>: curious? 💬 \n\n' +
+		"\t<\a>exp</\a>: previous experience and things I've built 📃\n\n" +
+		'\t<\a>now</\a>: what I am doing right now 🕒\n\n' +
+		'\t<\a>books</\a>: my personal recommendations 📚\n\n' +
+		'\t<\a>eggs</\a>: easter eggs 🎲\n\n' +
+    '\t<\a>thanks</\a>: people 🌟\n\n' +
+		'\t<\a>contact</\a>: coffee, maybe? 👋\n'
   },
 
     // Need to clean this, but it works! Now use actual palettes
@@ -65,12 +65,10 @@ var text = {
     background.style.backgroundColor = backgroundColor[randomOffSet]
   },
 
-  whoareyou: 'Software engineer, wannabe writer, noob powerlifter, hopeful entrepreneur\n' +
-             '@Stanford\n' +
-             'Dallas --> SF | Boston\n' +
-             "Check out my <a href='http://brandontruong.com'>blog</a>!\n" +
-             "Follow me on <a href='https://www.instagram.com/btrooo/'>instagram</a>!\n\n" +
-             "Check out my 'work' or 'projects' for more info on tech stuff.\n",
+  whoareyou: "hi, I'm Marco\n" +
+             "software developer @RBS\n" +
+             "Genoa (IT) &rarr; Manchester (UK) &rarr; Edinburgh (UK) &rarr; ?\n" +
+             "web develppment 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n",
 
   workObj: [
     {
@@ -177,79 +175,45 @@ var text = {
     return output
   },
 
-  projObj: [
+  booksObj: [
     {
-      name: 'HelloToken',
-      url: 'http://hellotoken.com',
-      description: 'Designed the website and worked on building out backend infrastructure. (rails, js)'
+      title: 'Homo Deus: A Brief History of Tomorrow',
+      author: 'Yuval Noah Harari',
+      description: ' add something'
     },
     {
-      name: 'Bayesian Classification of Tweets During Natural Disasters',
-      url: 'https://www.asis.org/asist2014/proceedings/submissions/posters/349poster.pdf',
-      description: 'I led an NLP/ML research project with Dr. Caragea at UNT. (java, opennlp, bayes)'
+      title: 'Sapiens: A Brief History of Humankind',
+      author: 'Yuval Noah Harari',
+      description: ' '
     },
     {
-      name: 'EnergyPal (Grand Prize in Energy at NTx Apps Challenge)',
-      url: 'https://play.google.com/store/apps/details?id=com.ionicframework.energypal312399',
-      description: 'Live appliance-by-appliance energy monitoring system. You can see how much your computer is using from your phone, live! (ionic, js, java-hardware code)'
+      title: 'The Master and Margarita',
+      author: 'Mikhail Bulgakov',
+      description: ' '
     },
     {
-      name: 'AdmitHub',
-      url: 'https://admithub.com',
-      description: 'Helping bridge the many gaps of knowledge in college admissions.'
+      title: 'The Elements of Style',
+      author: 'Strunk Jr. William',
+      description: ' '
     },
     {
-      name: 'Byte',
-      url: 'http://yhackbyte.herokuapp.com/',
-      description: 'Goal: git for audio. Product: compile audio clips that you record. (built at YHack)'
-    },
-    {
-      name: 'CLTR',
-      url: 'https://github.com/btroo/CLTR',
-      description: 'Actiony-puzzley game I couldn\'t finish because game dev causes carpal tunnel... (libgdx, java) (WIP).'
-    },
-    {
-      name: 'Slacking',
-      url: 'https://github.com/btroo/slacking',
-      description: 'Slack integration to show you a random HN article'
-    },
-    {
-      name: 'Akin Programming Language',
-      url: 'https://github.com/btroo/Akin',
-      description: 'NLP based programming language. (antlr, java/jvm)'
-    },
-    {
-      name: 'Campus 2.0 (1st at Campus 2.0 Hackathon)',
-      url: 'http://hello.brandontruong.com/campus',
-      description: 'App to gamify the usage of campus resources. (cordova, web)'
-    },
-    {
-      name: 'Hexal',
-      url: 'http://hello.brandontruong.com/hexal/',
-      description: 'Experimental color chooser. (web)'
-    },
-    {
-      name: "Where's my car (2nd at Dallas 20 over 20 hackathon)",
-      url: 'https://github.com/simplyianm/wheres-my-car',
-      description: 'Helps you find your car in a parking lot. (phonegap)'
-    },
-    {
-      name: 'GitHub',
-      url: 'https://github.com/btroo',
-      description: 'Look at all my open source (some listed above)'
+      title: 'The Girl on the Train',
+      author: 'Paula Hawkins ',
+      description: ' '
     }
   ],
 
   books: function () {
-    var output = "Some stuff I've worked on (some are part of my work experience):\n\n"
+    var output = "These are some of the books I've read in the recent years, some of them really opened my mind.\n\n"
 
-    this.projObj.forEach(function (item) {
+    this.booksObj.forEach(function (item) {
       output += '\t' +
-			"<a href='" +
-			item.url +
-			"'>" +
-			item.name +
-			'</a>\n' +
+			"<a>" +
+			item.title +
+			"</a> - " +
+        "<i>" +
+        item.author +
+        "</i> \n " +
 			'\t  ' +
 			item.description +
 			'\n\n'
@@ -260,10 +224,10 @@ var text = {
 
   eggs: function () {
     var eggs = [
-      'flip',
-      'destroy',
-      'matrix',
-      '&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; b a'
+      '<\a>flip</\a>',
+      '<\a>destroy</\a>',
+      '<\a>matrix</\a>',
+      '<\a>&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; b a</\a>'
     ]
 
     var random = Math.floor((Math.random() * eggs.length))
@@ -277,5 +241,5 @@ var text = {
   "\tI write stupid things from <a href='https://twitter.com/marcLrv'>here</a>\n" +
   "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n",
 
-  notRight: "That doesn't do anything, type 'help' for some... help\n"
+  notRight: "That doesn't do anything, type <\a>help</\a> for some... help\n"
 }
