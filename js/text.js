@@ -20,7 +20,7 @@ var text = {
 		"\texp: previous experience and things I've built\n\n" +
 		'\tnow: what I am doing right now\n\n' +
 		'\tbooks: my personal recommendations\n\n' +
-		'\tfun: fun fact\n\n' +
+		'\teggs: easter eggs\n\n' +
     '\tthanks: people\n\n' +
 		'\tcontact: coffee, maybe?\n'
   },
@@ -258,29 +258,24 @@ var text = {
     return output
   },
 
-  fun: function () {
-    var facts = [
-      'I have a fairly substantial music library. (yes, I download my music still)',
-      'I love pho.',
-      "I don't like sweets (sometimes in moderation it's okay).",
-      "I smile pretty much 100% of the time when I'm dancing. My friends knock me for it.",
-      'C++ was my first programming language, but I barely remember anything regarding it now.',
-      'A lot of my friends call me a bboy although I rarely bboy seriously.',
-      "I lived in Texas for my entire life. Then I went to California... don't really want to go back to Texas.",
-      "I walk around my dorm in boxers even when it's cold.",
-      'I like to write short stories.',
-      "I feel sad when I don't have my Kindle.",
-      'Favorite book: Infinite Jest by David Foster Wallace',
-      'Favorite music artists: LCD Soundsystem/James Murphy, Kanye West, Nujabes, Kendrick Lamar, Jai Paul (love/hate relationship)'
+  eggs: function () {
+    var eggs = [
+      'flip',
+      'destroy',
+      'matrix',
+      '&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; b a'
     ]
 
-    var random = Math.floor((Math.random() * facts.length))
-    return facts[random] + '\n'
+    var random = Math.floor((Math.random() * eggs.length))
+    return 'Try typing... ' + eggs[random] + '\n'
   },
 
   thanks: "Thank you guys\n",
 
-  contact: "say hey <a href='mailto:me@brandontruong.com'>here</a>\n",
+  contact: "I am currently based in <a>Edinburgh, UK</a>\n\n" +
+  "\tmy github is <a href='https://github.com/mlrv'>this</a>\n" +
+  "\tI write stupid things from <a href='https://twitter.com/marcLrv'>here</a>\n" +
+  "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n",
 
-  notRight: "Oops, that's not a valid command... try '?'\n"
+  notRight: "That doesn't do anything, type 'help' for some... help\n"
 }

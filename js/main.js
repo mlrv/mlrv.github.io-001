@@ -40,8 +40,8 @@ $(function () {
         return text.now()
       case 'books':
         return text.books()
-      case 'fun':
-        return text.fun()
+      case 'eggs':
+        return text.eggs()
       case 'thanks':
         return text.thanks
       case 'contact':

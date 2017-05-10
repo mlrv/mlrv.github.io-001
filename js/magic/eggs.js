@@ -21,7 +21,7 @@ var eggs = {
                 })
 
                 .addHook(function () {
-                  alert('Konami!')
+                  alert('1337 mode activated!')
                   console.log('Hook called for: ' + this.activeEgg.keys)
                   console.log(this.activeEgg.metadata)
                 }).listen()
