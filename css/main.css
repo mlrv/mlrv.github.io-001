@@ -28,6 +28,10 @@ html, body {
     transition: all 1.5s ease;
     display: none;
 }
+/* This only appears on mobile to replace the auto typing */
+#typed-stringsOnMobile {
+    display: none;
+}
 /* The matrix */
 #waterfall {
     height: 100%;
@@ -147,12 +151,13 @@ body.transform {
 }
 
 @media screen and (max-width: 600px) {
-    #console {
+    #console, #typed-strings {
         display: none;
     }
     #replaceConsoleOnMobile {
         display: inherit;
     }
+
 }
 
 
