@@ -9,7 +9,8 @@ TO DO:
  [x] restructure files, do not have everything in text.js
  [x] add <div> with auto typing
  [x] now there is a scrollbar - fix containers so that everything is in one window and the bar disappears
- [ ] fix auto typing in a nice way
+ [x] fix auto typing in a nice way
+ [ ] download CV with command from CLI
  [ ] add list of eggs if the user wants
  [ ] fix matrix so that it properly loads from the beginning
  [ ] fix colors to have opacity at 50%
@@ -31,16 +32,18 @@ $(function () {
       case 'ls':
       case 'help':
         return text.help()
-      case 'brandon':
-        return text.brandon
-      case 'work':
-        return text.work()
-      case 'positions':
-        return text.positions()
-      case 'projects':
-        return text.projects()
+      case 'whoareyou':
+        return text.whoareyou
+      case 'exp':
+        return text.exp()
+      case 'now':
+        return text.now()
+      case 'books':
+        return text.books()
       case 'fun':
         return text.fun()
+      case 'thanks':
+        return text.thanks
       case 'contact':
         return text.contact
       case 'colors':

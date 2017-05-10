@@ -15,14 +15,14 @@ var text = {
 
   help: function () {
     return this.helpGreeting() + '\n\n' +
-		'Try one of the following commands:\n\n' +
-		'\tbrandon: a little about me\n\n' +
-		"\twork: my work experience and positions i've held\n\n" +
-		'\tpositions: leadership stuff\n\n' +
-		'\tprojects: some projects\n\n' +
+		'Try one of these:\n\n' +
+		'\twhoareyou: curious?\n\n' +
+		"\texp: previous experience and things I've built\n\n" +
+		'\tnow: what I am doing right now\n\n' +
+		'\tbooks: my personal recommendations\n\n' +
 		'\tfun: fun fact\n\n' +
-		'\tcontact: say hey\n' +
-        '\tNEW LINE\n'
+    '\tthanks: people\n\n' +
+		'\tcontact: coffee, maybe?\n'
   },
 
     // Need to clean this, but it works! Now use actual palettes
@@ -65,7 +65,7 @@ var text = {
     background.style.backgroundColor = backgroundColor[randomOffSet]
   },
 
-  brandon: 'Software engineer, wannabe writer, noob powerlifter, hopeful entrepreneur\n' +
+  whoareyou: 'Software engineer, wannabe writer, noob powerlifter, hopeful entrepreneur\n' +
              '@Stanford\n' +
              'Dallas --> SF | Boston\n' +
              "Check out my <a href='http://brandontruong.com'>blog</a>!\n" +
@@ -117,7 +117,7 @@ var text = {
     }
   ],
 
-  work: function () {
+  exp: function () {
     var output = 'My work exp:\n\n'
     this.workObj.forEach(function (item) {
       output += ('\t' +
@@ -162,7 +162,7 @@ var text = {
     }
   ],
 
-  positions: function () {
+  now: function () {
     var output = 'positions:\n\n'
     this.positionsObj.forEach(function (item) {
       output += ('\t' +
@@ -240,7 +240,7 @@ var text = {
     }
   ],
 
-  projects: function () {
+  books: function () {
     var output = "Some stuff I've worked on (some are part of my work experience):\n\n"
 
     this.projObj.forEach(function (item) {
@@ -277,6 +277,8 @@ var text = {
     var random = Math.floor((Math.random() * facts.length))
     return facts[random] + '\n'
   },
+
+  thanks: "Thank you guys\n",
 
   contact: "say hey <a href='mailto:me@brandontruong.com'>here</a>\n",
 

@@ -92,7 +92,7 @@ html, body {
 }
 /* The text color of the output. */
 .jqconsole-output {
-    color: #ff3333;
+    color: #eee;
     transition: all 1.5s ease;
 }
 .hiddenelement {
