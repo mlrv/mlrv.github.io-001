@@ -128,7 +128,15 @@ var text = {
 				'\n\n')
     })
 
+    output += 'type <\a>cv</\a> to get the boring version of my cv ' +
+      '<\i>(last updated: 10/05/17)</\i> \n\n'
+
     return output
+  },
+
+  cv: function () {
+    var win = window.open('docs/Marco_Levrero_CV.pdf', '_blank')
+    win.focus()
   },
 
   positionsObj: [
@@ -172,6 +180,10 @@ var text = {
 				'</a>' +
 				'\n\n')
     })
+
+    output += 'type <\a>cv</\a> to get the boring version of my cv ' +
+      '<\i>(last updated: 10/05/17)</\i> \n\n'
+
     return output
   },
 

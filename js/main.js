@@ -36,6 +36,8 @@ $(function () {
         return text.whoareyou
       case 'exp':
         return text.exp()
+      case 'cv':
+        return text.cv()
       case 'now':
         return text.now()
       case 'books':
