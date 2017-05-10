@@ -13,6 +13,7 @@ I highly suggest installing [live-server](https://github.com/tapio/live-server),
 npm install -g live-server
 ```
 Feel free to clone it and play with it if you like.
+
 N.B. the website doesn't work well on mobiles, so I disabled the main features. I might consider fixing it in the future.
 
 ## Source code :clipboard:
