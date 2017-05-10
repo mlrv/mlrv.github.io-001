@@ -144,7 +144,7 @@ var text = {
     {
       title: 'Homo Deus: A Brief History of Tomorrow',
       author: 'Yuval Noah Harari',
-      description: ' add something'
+      description: ' '
     },
     {
       title: 'Sapiens: A Brief History of Humankind',
@@ -199,7 +199,13 @@ var text = {
     return 'Try typing... ' + eggs[random] + '\n\n'
   },
 
-  thanks: "Thank you guys\n\n",
+  thanks: "This project is based on an idea of <a href='https://github.com/btroo'>btroo</a>, a big thanks goes to him. \n" +
+  "These are some of the other people who made this possible: \n\n" +
+  "&#9679; <a href='https://github.com/kolber/audiojs'>kolber</a> \n" +
+  "&#9679; <a href='https://github.com/mattboldt/typed.js'>mattboldt</a> \n" +
+  "&#9679; <a href='https://github.com/tapio/live-server'>tapio</a> \n" +
+  "&#9679; <a href='http://thatmikeflynn.com/egg.js/'>thatmikeflynn</a> \n" +
+  "&#9679; <a href='https://github.com/lvtr4n/lvtr4n.github.io'>lvtr4n</a> \n\n",
 
   contact: "I am currently based in <a>Edinburgh, UK</a>\n\n" +
   "\tmy github is <a href='https://github.com/mlrv'>this</a>\n" +
