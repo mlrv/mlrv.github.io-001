@@ -150,7 +150,7 @@ body.transform {
     100% { opacity:1; }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 986px) {
     #console, #typed-strings {
         display: none;
     }
