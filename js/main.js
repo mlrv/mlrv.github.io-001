@@ -39,7 +39,7 @@ $(function () {
       case 'cv':
         return text.cv()
       case 'now':
-        return text.now()
+        return text.now
       case 'books':
         return text.books()
       case 'eggs':

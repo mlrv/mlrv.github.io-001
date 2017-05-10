@@ -25,14 +25,18 @@ var eggs = {
                   console.log('Hook called for: ' + this.activeEgg.keys)
                   console.log(this.activeEgg.metadata)
                 }).listen()
+    return '\n'
   },
 
   flip: function () {
     document.body.className = 'transform'
+    return '\n'
   },
 
   matrix: function () {
+    document.getElementById('typed-strings').style.visibility = 'hidden'
     document.getElementById('waterfall').style.visibility = 'visible'
+    return '\n'
   },
 
   // Spaceship
@@ -51,5 +55,6 @@ var eggs = {
     }
 
     eventFire(document.getElementById('.hiddenelement'), 'click')
+    return '\n'
   }
 }

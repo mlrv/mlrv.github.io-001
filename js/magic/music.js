@@ -6,6 +6,8 @@ var music = {
 
   play: function () {
     document.getElementById('audioPlayer').style.visibility = 'visible'
+    return '\n'
   }
+
 
 }

@@ -17,12 +17,13 @@ var text = {
     return this.helpGreeting() + '\n\n' +
 		'Try one of these:\n\n' +
 		'\t<\a>whoareyou</\a>: curious? 💬 \n\n' +
-		"\t<\a>exp</\a>: previous experience and things I've built 📃\n\n" +
+		"\t<\a>exp</\a>: previous experience 📃\n\n" +
 		'\t<\a>now</\a>: what I am doing right now 🕒\n\n' +
+    '\t<\a>music</\a>: need some company while browsing? 🎺\n\n' +
 		'\t<\a>books</\a>: my personal recommendations 📚\n\n' +
 		'\t<\a>eggs</\a>: easter eggs 🎲\n\n' +
     '\t<\a>thanks</\a>: people 🌟\n\n' +
-		'\t<\a>contact</\a>: coffee, maybe? 👋\n'
+		'\t<\a>contact</\a>: coffee, maybe? 👋\n\n'
   },
 
     // Need to clean this, but it works! Now use actual palettes
@@ -68,50 +69,38 @@ var text = {
   whoareyou: "hi, I'm Marco\n" +
              "software developer @RBS\n" +
              "Genoa (IT) &rarr; Manchester (UK) &rarr; Edinburgh (UK) &rarr; ?\n" +
-             "web develppment 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n",
+             "web develppment 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n\n",
 
   workObj: [
     {
-      name: 'Software Engineer (contractor)',
-      company: 'Gigster',
-      url: 'https://www.gigster.com',
-      time: 'November 2016 -> Present'
-    },
-    {
-      name: 'Software Engineering (intern)',
-      company: 'Udacity',
-      url: 'https://www.udacity.com',
-      time: 'Summer 2015 -> Spring 2016'
-    },
-    {
-      name: 'Developer (part-time/contract)',
-      company: 'HelloToken',
-      url: 'http://www.hellotoken.com',
-      time: 'Spring 2015 -> Summer 2016'
-    },
-    {
-      name: 'Growth Hacker/Developer (intern)',
-      company: 'Apptopia',
-      url: 'http://www.apptopia.com',
-      time: 'Summer 2014'
-    },
-    {
-      name: 'Full Stack Javascript Engineer',
-      company: 'AdmitHub',
-      url: 'http://www.admithub.com',
-      time: 'May 2014 -> September 2014'
-    },
-    {
-      name: 'Researcher',
-      company: 'UNT Dept. of Computer Science and Engineering',
-      url: 'http://www.cse.unt.edu/~ccaragea/research.html',
-      time: 'November 2013 -> Present'
+      name: 'Software Engineer',
+      company: 'RBS',
+      url: 'http://www.bankofapis.com/',
+      time: 'May 2017 &rarr; Present'
     },
     {
       name: 'Developer',
-      company: 'Signet Education',
-      url: 'https://signeteducation.com/',
-      time: 'Summer 2012'
+      company: 'Pixey',
+      url: 'http://www.pixey.io/',
+      time: 'May 2017 &rarr; Present'
+    },
+    {
+      name: 'Innovation Consultant',
+      company: 'RBS',
+      url: 'http://personal.rbs.co.uk/',
+      time: 'Sep 2016 &rarr; May 2017'
+    },
+    {
+      name: 'Project Manager',
+      company: 'UoM (MACE)',
+      url: 'http://www.mace.manchester.ac.uk/',
+      time: 'Sep 2015 &rarr; Jun 2016'
+    },
+    {
+      name: 'Engineer',
+      company: 'Ansaldo Energia',
+      url: 'http://www.ansaldoenergia.it/',
+      time: 'Dec 2014 &rarr; Sep 2015'
     }
   ],
 
@@ -125,6 +114,10 @@ var text = {
 				"'>" +
 				item.company +
 				'</a>' +
+        ' &#9679; ' +
+        "<i>" +
+        item.time +
+        "</i> \n " +
 				'\n\n')
     })
 
@@ -137,55 +130,15 @@ var text = {
   cv: function () {
     var win = window.open('docs/Marco_Levrero_CV.pdf', '_blank')
     win.focus()
+    return '\n'
   },
 
-  positionsObj: [
 
-    {
-      position: 'Organizer',
-      organization: 'TreeHacks',
-      url: 'https://www.treehacks.com/'
-    },
-    {
-      position: 'Officer',
-      organization: 'Stanford ACM',
-      url: 'http://stanfordacm.com/'
-    },
-    {
-      position: 'President',
-      organization: 'RESOLV',
-      url: 'http://resolv.club'
-    },
-    {
-      position: 'President (@ chs, tams)',
-      organization: 'DFC',
-      url: 'http://thedfcnetwork.com/'
-    },
-    {
-      position: 'Vice President',
-      organization: 'CSO',
-      url: 'http://tamscompsci.com/'
-    }
-  ],
 
-  now: function () {
-    var output = 'positions:\n\n'
-    this.positionsObj.forEach(function (item) {
-      output += ('\t' +
-				item.position +
-				" of <a href='" +
-				item.url +
-				"'>" +
-				item.organization +
-				'</a>' +
-				'\n\n')
-    })
-
-    output += 'type <\a>cv</\a> to get the boring version of my cv ' +
-      '<\i>(last updated: 10/05/17)</\i> \n\n'
-
-    return output
-  },
+  now:
+    "I am currently working as a software engineer in the innovation team of <\a>RBS</\a> \n" +
+    "At the same time, I collaborate with <\a>Pixey</\a>, working as a fullstack web developer \n" +
+    "If I'm not eating pizza or playing some sport, I spend my time learning about cool stuff and working on personal projects\n\n",
 
   booksObj: [
     {
@@ -243,15 +196,15 @@ var text = {
     ]
 
     var random = Math.floor((Math.random() * eggs.length))
-    return 'Try typing... ' + eggs[random] + '\n'
+    return 'Try typing... ' + eggs[random] + '\n\n'
   },
 
-  thanks: "Thank you guys\n",
+  thanks: "Thank you guys\n\n",
 
   contact: "I am currently based in <a>Edinburgh, UK</a>\n\n" +
   "\tmy github is <a href='https://github.com/mlrv'>this</a>\n" +
   "\tI write stupid things from <a href='https://twitter.com/marcLrv'>here</a>\n" +
-  "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n",
+  "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n\n",
 
-  notRight: "That doesn't do anything, type <\a>help</\a> for some... help\n"
+  notRight: "That doesn't do anything, type <\a>help</\a> for some... help\n\n"
 }
