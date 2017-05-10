@@ -16,6 +16,18 @@ html, body {
   margin-top: 0px;
   transition: all 1.5s ease;
 }
+/* This only appears on mobile to replace the console */
+#replaceConsoleOnMobile {
+    height: 90%;
+    width: 100%;
+    position:relative;
+    background-color:rgba(0,0,0,0.5);
+    border: none;
+    margin: 0 auto;
+    margin-top: 0px;
+    transition: all 1.5s ease;
+    display: none;
+}
 /* The matrix */
 #waterfall {
     height: 100%;
@@ -132,6 +144,15 @@ body.transform {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+@media screen and (max-width: 600px) {
+    #console {
+        display: none;
+    }
+    #replaceConsoleOnMobile {
+        display: inherit;
+    }
 }
 
 
