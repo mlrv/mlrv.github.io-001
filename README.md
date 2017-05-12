@@ -6,7 +6,7 @@ This is my personal website, a big thanks goes to btroo (https://github.com/btro
 ## Setup :wrench:
 To run it locally, clone it somewhere on your pc with: 
 ```javascript
-git clone https://github.com/mlrv/c0nsoleStyle
+git clone https://github.com/mlrv/mlrv.github.io.git
 ```
 I highly suggest installing [live-server](https://github.com/tapio/live-server), a little development server with live reload capability.
 ```javascript
