@@ -1,17 +1,20 @@
-# c0nsoleStyle :space_invader:
+# mlrv.github.io :space_invader:
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-This is my personal website, a big thanks goes to btroo (https://github.com/btroo), who truly inspired me with his work. 
+This is my personal website, a big thanks goes to btroo (https://github.com/btroo), who truly inspired me with his work. The idea of this website is based on his work.
 
 ## Setup :wrench:
 To run it locally, clone it somewhere on your pc with: 
 ```javascript
-git clone https://github.com/mlrv/c0nsoleStyle
+git clone https://github.com/mlrv/mlrv.github.io.git
 ```
 I highly suggest installing [live-server](https://github.com/tapio/live-server), a little development server with live reload capability.
 ```javascript
 npm install -g live-server
 ```
+Feel free to clone it and play with it if you like.
+
+N.B. the website doesn't work well on mobiles, so I disabled the main features. I might consider fixing it in the future.
 
 ## Source code :clipboard:
 ```
