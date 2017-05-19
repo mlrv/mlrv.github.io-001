@@ -1,13 +1,13 @@
 var text = {
 
   helpGreeting: function () {
-    var random = Math.floor((Math.random() * 3) + 1)
-    console.log(random)
+    var random = Math.floor((Math.random() * 3) + 1);
+    console.log(random);
     switch (random) {
       case 1:
-        return "What's up?"
+        return "What's up?";
       case 2:
-        return 'Nice to meet you pal!'
+        return 'Nice to meet you pal!';
       case 3:
         return 'What it do?'
     }
@@ -29,27 +29,27 @@ var text = {
     // Need to clean this, but it works! Now use actual palettes
 		// Problem: this only changes the existing lines, not the new ones!
   colors: function () {
-    var random = Math.floor((Math.random() * 5) + 1)
-    var randomOffSet = random - 1
+    var random = Math.floor((Math.random() * 5) + 1);
+    var randomOffSet = random - 1;
 
     function getRandomColor () {
-      var letters = '0123456789ABCDEF'
-      var color = '#'
+      var letters = '0123456789ABCDEF';
+      var color = '#';
       for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)]
       }
       return color
     }
 
-    var backgroundColor = ['#002B36', '#000000', getRandomColor(), getRandomColor(), getRandomColor()]
-    var consolePromptColor = ['#B58900', '#00DD00', getRandomColor(), getRandomColor(), getRandomColor()]
-    var outputColor = ['#DC322F', '#ff3333', getRandomColor(), getRandomColor(), getRandomColor()]
-    var oldPromptColor = ['#268BD2', '#00DD00', getRandomColor(), getRandomColor(), getRandomColor()]
+    var backgroundColor = ['#002B36', '#000000', getRandomColor(), getRandomColor(), getRandomColor()];
+    var consolePromptColor = ['#B58900', '#00DD00', getRandomColor(), getRandomColor(), getRandomColor()];
+    var outputColor = ['#DC322F', '#ff3333', getRandomColor(), getRandomColor(), getRandomColor()];
+    var oldPromptColor = ['#268BD2', '#00DD00', getRandomColor(), getRandomColor(), getRandomColor()];
 
-    var background = document.querySelector('#console')
-    var consolePrompt = document.querySelectorAll('.jqconsole-prompt')
-    var oldPrompt = document.querySelectorAll('.jqconsole-old-prompt')
-    var outputElements = document.querySelectorAll('.jqconsole-output')
+    var background = document.querySelector('#console');
+    var consolePrompt = document.querySelectorAll('.jqconsole-prompt');
+    var oldPrompt = document.querySelectorAll('.jqconsole-old-prompt');
+    var outputElements = document.querySelectorAll('.jqconsole-output');
 
     for (i = 0; i < outputElements.length; i++) {
       outputElements[i].style.color = outputColor[randomOffSet]
@@ -105,7 +105,7 @@ var text = {
   ],
 
   exp: function () {
-    var output = 'My work exp:\n\n'
+    var output = 'My work exp:\n\n';
     this.workObj.forEach(function (item) {
       output += ('\t' +
 				item.name +
@@ -119,17 +119,17 @@ var text = {
         item.time +
         "</i> \n " +
 				'\n\n')
-    })
+    });
 
     output += 'type <\a>cv</\a> to get the boring version of my cv ' +
-      '<\i>(last updated: 10/05/17)</\i> \n\n'
+      '<\i>(last updated: 10/05/17)</\i> \n\n';
 
     return output
   },
 
   cv: function () {
-    var win = window.open('docs/Marco_Levrero_CV.pdf', '_blank')
-    win.focus()
+    var win = window.open('docs/Marco_Levrero_CV.pdf', '_blank');
+    win.focus();
     return '\n'
   },
 
@@ -144,27 +144,22 @@ var text = {
     {
       title: 'Homo Deus: A Brief History of Tomorrow',
       author: 'Yuval Noah Harari',
-      description: ' '
+      description: 'What does our future hold?'
     },
     {
       title: 'Sapiens: A Brief History of Humankind',
       author: 'Yuval Noah Harari',
-      description: ' '
+      description: 'Planet Earth is 4.5 billion years old. In just a fraction of that time, one species among countless others has conquered it. Us.'
     },
     {
       title: 'The Master and Margarita',
       author: 'Mikhail Bulgakov',
-      description: ' '
+      description: 'A dazzling masterpiece, probably my favourite book ever.'
     },
     {
       title: 'The Elements of Style',
       author: 'Strunk Jr. William',
-      description: ' '
-    },
-    {
-      title: 'The Girl on the Train',
-      author: 'Paula Hawkins ',
-      description: ' '
+      description: 'No book in shorter space, with fewer words, will help any writer more than this persistent little volume.'
     }
   ],
 
@@ -182,7 +177,7 @@ var text = {
 			'\t  ' +
 			item.description +
 			'\n\n'
-    })
+    });
 
     return output
   },
@@ -193,9 +188,9 @@ var text = {
       '<\a>destroy</\a>',
       '<\a>matrix</\a>',
       '<\a>&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; b a</\a>'
-    ]
+    ];
 
-    var random = Math.floor((Math.random() * eggs.length))
+    var random = Math.floor((Math.random() * eggs.length));
     return 'Try typing... ' + eggs[random] + '\n\n'
   },
 
@@ -213,4 +208,4 @@ var text = {
   "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n\n",
 
   notRight: "That doesn't do anything, type <\a>help</\a> for some... help\n\n"
-}
+};
