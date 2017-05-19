@@ -1,5 +1,4 @@
 # mlrv.github.io :space_invader:
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 This is my personal website, a big thanks goes to btroo (https://github.com/btroo), who truly inspired me with his work. The idea of this website is based on his work.
 

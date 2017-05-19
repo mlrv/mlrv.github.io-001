@@ -1,21 +1,7 @@
 var text = {
 
-  helpGreeting: function () {
-    var random = Math.floor((Math.random() * 3) + 1);
-    console.log(random);
-    switch (random) {
-      case 1:
-        return "What's up?";
-      case 2:
-        return 'Nice to meet you pal!';
-      case 3:
-        return 'What it do?'
-    }
-  },
-
   help: function () {
-    return this.helpGreeting() + '\n\n' +
-		'Try one of these:\n\n' +
+    return 'Try one of these:\n\n' +
 		'\t<\a>whoareyou</\a>: curious? 💬 \n\n' +
 		"\t<\a>exp</\a>: previous experience 📃\n\n" +
 		'\t<\a>now</\a>: what I am doing right now 🕒\n\n' +

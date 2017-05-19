@@ -10,7 +10,7 @@ var eggs = {
 
   // General eggs
   unleashTheRabbit: function () {
-    var egg = new Egg()
+    var egg = new Egg();
     egg
                 .addCode('up,up,down,down,left,right,left,right,b,a', function () {
                   jQuery('#egggif').fadeIn(500, function () {
@@ -21,21 +21,21 @@ var eggs = {
                 })
 
                 .addHook(function () {
-                  alert('1337 mode activated!')
-                  console.log('Hook called for: ' + this.activeEgg.keys)
+                  alert('1337 mode activated!');
+                  console.log('Hook called for: ' + this.activeEgg.keys);
                   console.log(this.activeEgg.metadata)
-                }).listen()
+                }).listen();
     return '\n'
   },
 
   flip: function () {
-    document.body.className = 'transform'
+    document.body.className = 'transform';
     return '\n'
   },
 
   matrix: function () {
-    document.getElementById('typed-strings').style.visibility = 'hidden'
-    document.getElementById('waterfall').style.visibility = 'visible'
+    document.getElementById('typed-strings').style.visibility = 'hidden';
+    document.getElementById('waterfall').style.visibility = 'visible';
     return '\n'
   },
 
@@ -48,13 +48,13 @@ var eggs = {
       if (el.fireEvent) {
         el.fireEvent('on' + etype)
       } else {
-        var evObj = document.createEvent('Events')
-        evObj.initEvent(etype, true, false)
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
         el.dispatchEvent(evObj)
       }
     }
 
-    eventFire(document.getElementById('.hiddenelement'), 'click')
+    eventFire(document.getElementById('.hiddenelement'), 'click');
     return '\n'
   }
-}
+};
