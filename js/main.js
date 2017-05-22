@@ -36,7 +36,7 @@ $(function () {
       case 'music':
         return music.play();
       default:
-        return text.notRight
+        return text.notRight;
     }
   }
 
@@ -46,9 +46,9 @@ $(function () {
     jqconsole.Prompt(true, function (input) {
       if (input) jqconsole.Write(process(input), 'jqconsole-output', false);
       else jqconsole.Write(text.notRight, 'jqconsole-output');
-      startPrompt()
-    })
+      startPrompt();
+    });
   };
 
-  startPrompt()
+  startPrompt();
 });
