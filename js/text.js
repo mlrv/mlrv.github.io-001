@@ -125,6 +125,11 @@ var text = {
         "If I'm not eating pizza or playing some sport, I spend my time learning about cool stuff and working on personal projects\n\n",
 
     booksObj: [{
+            title: 'Shoe Dog',
+            author: 'Phil Knight',
+            description: 'The "Just Do It" every entrepreneur needs.'
+        },
+        {
             title: 'Homo Deus: A Brief History of Tomorrow',
             author: 'Yuval Noah Harari',
             description: 'What does our future hold?'
