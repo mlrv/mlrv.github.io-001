@@ -9,6 +9,7 @@ var text = {
             '\t<\a>books</\a>: my personal recommendations 📚\n\n' +
             '\t<\a>eggs</\a>: easter eggs 🎲\n\n' +
             '\t<\a>thanks</\a>: people 🌟\n\n' +
+            '\t<\a>source</\a>: I believe in an open 🌎\n\n' +
             '\t<\a>contact</\a>: coffee, maybe? 👋\n\n'
     },
 
@@ -118,7 +119,11 @@ var text = {
         return '\n'
     },
 
-
+    source: function() {
+        var win = window.open('https://github.com/mlrv/mlrv.github.io', '_blank');
+        win.focus();
+        return '\n'
+    },
 
     now: "I am currently working as a software engineer in the innovation team of <\a>RBS</\a> \n" +
         "At the same time, I collaborate with <\a>Pixey</\a>, working as a fullstack web developer \n" +
