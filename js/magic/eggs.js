@@ -34,6 +34,7 @@ var eggs = {
   },
 
   matrix: function () {
+    startTheMatrix();
     document.getElementById('typed-strings').style.visibility = 'hidden';
     document.getElementById('waterfall').style.visibility = 'visible';
     return '\n'

@@ -1,6 +1,6 @@
 var text = {
 
-    help: function() {
+    help: function () {
         return 'Try one of these:\n\n' +
             '\t<\a>whoareyou</\a>: curious? 💬 \n\n' +
             "\t<\a>exp</\a>: previous experience 📃\n\n" +
@@ -15,7 +15,7 @@ var text = {
 
     // Need to clean this, but it works! Now use actual palettes
     // Problem: this only changes the existing lines, not the new ones!
-    colors: function() {
+    colors: function () {
         var random = Math.floor((Math.random() * 5) + 1);
         var randomOffSet = random - 1;
 
@@ -54,45 +54,45 @@ var text = {
     },
 
     whoareyou: "hi, I'm Marco\n" +
-        "software developer @RBS\n" +
-        "Genoa (IT) &rarr; Manchester (UK) &rarr; Edinburgh (UK) &rarr; ?\n" +
-        "web development 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n\n",
+    "software developer @RBS\n" +
+    "Genoa (IT) &rarr; Manchester (UK) &rarr; Edinburgh (UK) &rarr; ?\n" +
+    "web development 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n\n",
 
     workObj: [{
-            name: 'Software Engineer',
-            company: 'RBS',
-            url: 'http://www.bankofapis.com/',
-            time: 'May 2017 &rarr; Present'
-        },
-        {
-            name: 'Developer',
-            company: 'Pixey',
-            url: 'http://www.pixey.io/',
-            time: 'May 2017 &rarr; Present'
-        },
-        {
-            name: 'Innovation Consultant',
-            company: 'RBS',
-            url: 'http://personal.rbs.co.uk/',
-            time: 'Sep 2016 &rarr; May 2017'
-        },
-        {
-            name: 'Project Manager',
-            company: 'UoM (MACE)',
-            url: 'http://www.mace.manchester.ac.uk/',
-            time: 'Sep 2015 &rarr; Jun 2016'
-        },
-        {
-            name: 'Engineer',
-            company: 'Ansaldo Energia',
-            url: 'http://www.ansaldoenergia.it/',
-            time: 'Dec 2014 &rarr; Sep 2015'
-        }
+        name: 'Software Engineer',
+        company: 'RBS',
+        url: 'http://www.bankofapis.com/',
+        time: 'May 2017 &rarr; Present'
+    },
+    {
+        name: 'Developer',
+        company: 'Pixey',
+        url: 'http://www.pixey.io/',
+        time: 'May 2017 &rarr; Present'
+    },
+    {
+        name: 'Innovation Consultant',
+        company: 'RBS',
+        url: 'http://personal.rbs.co.uk/',
+        time: 'Sep 2016 &rarr; May 2017'
+    },
+    {
+        name: 'Project Manager',
+        company: 'UoM (MACE)',
+        url: 'http://www.mace.manchester.ac.uk/',
+        time: 'Sep 2015 &rarr; Jun 2016'
+    },
+    {
+        name: 'Engineer',
+        company: 'Ansaldo Energia',
+        url: 'http://www.ansaldoenergia.it/',
+        time: 'Dec 2014 &rarr; Sep 2015'
+    }
     ],
 
-    exp: function() {
+    exp: function () {
         var output = 'My work exp:\n\n';
-        this.workObj.forEach(function(item) {
+        this.workObj.forEach(function (item) {
             output += ('\t' +
                 item.name +
                 " @ <a href='" +
@@ -113,53 +113,53 @@ var text = {
         return output
     },
 
-    cv: function() {
+    cv: function () {
         var win = window.open('docs/Marco_Levrero_CV.pdf', '_blank');
         win.focus();
         return '\n'
     },
 
-    source: function() {
+    source: function () {
         var win = window.open('https://github.com/mlrv/mlrv.github.io', '_blank');
         win.focus();
         return '\n'
     },
 
     now: "I am currently working as a software engineer in the innovation team of <\a>RBS</\a> \n" +
-        "At the same time, I collaborate with <\a>Pixey</\a>, working as a fullstack web developer \n" +
-        "If I'm not eating pizza or playing some sport, I spend my time learning about cool stuff and working on personal projects\n\n",
+    "At the same time, I collaborate with <\a>Pixey</\a>, working as a fullstack web developer \n" +
+    "If I'm not eating pizza or playing some sport, I spend my time learning about cool stuff and working on personal projects\n\n",
 
     booksObj: [{
-            title: 'Shoe Dog',
-            author: 'Phil Knight',
-            description: 'The "Just Do It" every entrepreneur needs.'
-        },
-        {
-            title: 'Homo Deus: A Brief History of Tomorrow',
-            author: 'Yuval Noah Harari',
-            description: 'What does our future hold?'
-        },
-        {
-            title: 'Sapiens: A Brief History of Humankind',
-            author: 'Yuval Noah Harari',
-            description: 'Planet Earth is 4.5 billion years old. In just a fraction of that time, one species among countless others has conquered it. Us.'
-        },
-        {
-            title: 'The Master and Margarita',
-            author: 'Mikhail Bulgakov',
-            description: 'A dazzling masterpiece, probably my favourite book ever.'
-        },
-        {
-            title: 'The Elements of Style',
-            author: 'Strunk Jr. William',
-            description: 'No book in shorter space, with fewer words, will help any writer more than this persistent little volume.'
-        }
+        title: 'Shoe Dog',
+        author: 'Phil Knight',
+        description: 'The "Just Do It" every entrepreneur needs.'
+    },
+    {
+        title: 'Homo Deus: A Brief History of Tomorrow',
+        author: 'Yuval Noah Harari',
+        description: 'What does our future hold?'
+    },
+    {
+        title: 'Sapiens: A Brief History of Humankind',
+        author: 'Yuval Noah Harari',
+        description: 'Planet Earth is 4.5 billion years old. In just a fraction of that time, one species among countless others has conquered it. Us.'
+    },
+    {
+        title: 'The Master and Margarita',
+        author: 'Mikhail Bulgakov',
+        description: 'A dazzling masterpiece, probably my favourite book ever.'
+    },
+    {
+        title: 'The Elements of Style',
+        author: 'Strunk Jr. William',
+        description: 'No book in shorter space, with fewer words, will help any writer more than this persistent little volume.'
+    }
     ],
 
-    books: function() {
+    books: function () {
         var output = "These are some of the books I've read in the recent years, some of them really opened my mind.\n\n"
 
-        this.booksObj.forEach(function(item) {
+        this.booksObj.forEach(function (item) {
             output += '\t' +
                 "<a>" +
                 item.title +
@@ -175,7 +175,7 @@ var text = {
         return output
     },
 
-    eggs: function() {
+    eggs: function () {
         var eggs = [
             '<\a>flip</\a>',
             '<\a>destroy</\a>',
@@ -188,17 +188,17 @@ var text = {
     },
 
     thanks: "This project is based on an idea of <a href='https://github.com/btroo'>btroo</a>, a big thanks goes to him. \n" +
-        "These are some of the other people who made this possible: \n\n" +
-        "&#9679; <a href='https://github.com/kolber/audiojs'>kolber</a> \n" +
-        "&#9679; <a href='https://github.com/mattboldt/typed.js'>mattboldt</a> \n" +
-        "&#9679; <a href='https://github.com/tapio/live-server'>tapio</a> \n" +
-        "&#9679; <a href='http://thatmikeflynn.com/egg.js/'>thatmikeflynn</a> \n" +
-        "&#9679; <a href='https://github.com/lvtr4n/lvtr4n.github.io'>lvtr4n</a> \n\n",
+    "These are some of the other people who made this possible: \n\n" +
+    "&#9679; <a href='https://github.com/kolber/audiojs'>kolber</a> \n" +
+    "&#9679; <a href='https://github.com/mattboldt/typed.js'>mattboldt</a> \n" +
+    "&#9679; <a href='https://github.com/tapio/live-server'>tapio</a> \n" +
+    "&#9679; <a href='http://thatmikeflynn.com/egg.js/'>thatmikeflynn</a> \n" +
+    "&#9679; <a href='https://github.com/lvtr4n/lvtr4n.github.io'>lvtr4n</a> \n\n",
 
     contact: "I am currently based in <a>Edinburgh, UK</a>\n\n" +
-        "\tmy github is <a href='https://github.com/mlrv'>this</a>\n" +
-        "\tI write stupid things from <a href='https://twitter.com/marcLrv'>here</a>\n" +
-        "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n\n",
+    "\tmy github is <a href='https://github.com/mlrv'>this</a>\n" +
+    "\tI write stupid things from <a href='https://twitter.com/marcLrv'>here</a>\n" +
+    "\tor you can just send me an <a href='mailto:marco.levrero@gmail.com'>email</a>\n\n",
 
     notRight: "That doesn't do anything, type <\a>help</\a> for some... help\n\n"
 };
