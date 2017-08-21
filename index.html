@@ -87,9 +87,9 @@
     </div>
 
     <script>
-        (function(i, s, o, g, r, a, m) {
+        (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
+            i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
@@ -111,7 +111,7 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
     <script src="js/auto%20typing/typed.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
 
             Typed.new("#typed", {
                 stringsElement: document.getElementById('typed-strings'),
@@ -121,17 +121,17 @@
                 contentType: 'html', // or text
                 // defaults to null for infinite loop
                 loopCount: null,
-                callback: function() {
-                    foo();
+                callback: function () {
+                    //
                 },
-                resetCallback: function() {
+                resetCallback: function () {
                     newTyped();
                 }
             });
 
             var resetElement = document.querySelector('.reset');
             if (resetElement) {
-                resetElement.addEventListener('click', function() {
+                resetElement.addEventListener('click', function () {
                     document.getElementById('typed')._typed.reset();
                 });
             }
@@ -140,10 +140,10 @@
     </script>
     <script src="/audiojs/audio.min.js"></script>
     <script>
-        $(function() {
+        $(function () {
             // Setup the player to autoplay the next track
             var a = audiojs.createAll({
-                trackEnded: function() {
+                trackEnded: function () {
                     var next = $('ol li.playing').next();
                     if (!next.length) next = $('ol li').first();
                     next.addClass('playing').siblings().removeClass('playing');
@@ -159,14 +159,14 @@
             audio.load(first);
 
             // Load in a track on click
-            $('ol li').click(function(e) {
+            $('ol li').click(function (e) {
                 e.preventDefault();
                 $(this).addClass('playing').siblings().removeClass('playing');
                 audio.load($('a', this).attr('data-src'));
                 audio.play();
             });
             // Keyboard shortcuts
-            $(document).keydown(function(e) {
+            $(document).keydown(function (e) {
                 var unicode = e.charCode ? e.charCode : e.keyCode;
                 // right arrow
                 if (unicode == 39) {
@@ -187,8 +187,8 @@
     </script>
 </body>
 
-<!--If you don't like trains... what about dinosaurs?
-
+<!--
+    
  _________________________________________
 / Q: What lies on the bottom of the ocean \
 \ and twitches? A: A nervous wreck.       /

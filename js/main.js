@@ -53,4 +53,9 @@ $(function() {
     };
 
     startPrompt();
+
+    jqconsole.RegisterShortcut('Z', function() {
+        this.Reset();
+        startPrompt();
+      });
 });

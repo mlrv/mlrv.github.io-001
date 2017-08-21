@@ -65,12 +65,6 @@ var text = {
         time: 'May 2017 &rarr; Present'
     },
     {
-        name: 'Developer',
-        company: 'Pixey',
-        url: 'http://www.pixey.io/',
-        time: 'May 2017 &rarr; Present'
-    },
-    {
         name: 'Innovation Consultant',
         company: 'RBS',
         url: 'http://personal.rbs.co.uk/',
