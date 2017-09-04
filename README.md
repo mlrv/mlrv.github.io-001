@@ -1,6 +1,6 @@
 # mlrv.github.io :space_invader:
 
-This is my personal website, a big thanks goes to btroo (https://github.com/btroo), who truly inspired me with his work. The idea of this website is based on his work.
+This is my personal website, powered by [jqconsole](https://github.com/replit/jq-console). A big thanks goes to btroo (https://github.com/btroo), who truly inspired me with his work, the idea of this website is based on his work.
 
 ## Setup :wrench:
 To run it locally, clone it somewhere on your pc with: 
@@ -26,18 +26,29 @@ root/
 ├── css/                  
 │   ├── ansi.css/              
 │   └── main.css          
-├── js/             
+├── js/  
+│   ├── jquery.js 
+│   ├── main.js 
+│   ├── modules.js              // Modularise all the things!
+│   ├── text.js             
 │   ├── auto typing/            // Auto typing js
 │   │   └── typed.js
 │   ├── console/                // Console js
 │   │   ├── jq.js
 │   │   ├── jqconsole.js
 │   │   └── jqconsole.min.js
+│   ├── objects/                // Objects
+│   │   ├── books.js
+│   │   ├── contact.js
+│   │   ├── help.js
+│   │   ├── thanks.js
+│   │   └── work.js
 │   └── magic/                  // Come here for magic
 │       ├── eggs.js             // Easter eggs
 │       ├── kickass.js          // Spaceship game
 │       ├── matrix.js           // The Matrix
 │       └── music.js            // Music player
+├── bundle.js
 ├── favicon.ico             
 ├── index.html               
 ├── LICENSE.md 
