@@ -11,6 +11,8 @@ I highly suggest installing [live-server](https://github.com/tapio/live-server),
 ```javascript
 npm install -g live-server
 ```
+Some components are included through [browserify](http://browserify.org/). Everything that's exported by `module.js` is then bundled together in `bundle.js`, if you change any of those files you have to then run  `browserify js/module.js -o bundle.js`.
+
 Feel free to clone it and play with it if you like.
 
 N.B. the website doesn't work well on mobiles, so I disabled the main features. I might consider fixing it in the future.
