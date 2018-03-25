@@ -18,7 +18,7 @@ var text = {
     whoareyou: "hi, I'm Marco\n" +
     "software developer @RBS\n" +
     "Genoa (IT) &rarr; Manchester (UK) &rarr; Edinburgh (UK) &rarr; ?\n" +
-    "web development 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n\n",
+    "software engineering 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n\n",
 
     workObj: modules.workObject,
 
@@ -57,9 +57,8 @@ var text = {
         return '\n'
     },
 
-    now: "I am currently working as a software engineer in the innovation team of <\a>RBS</\a> \n" +
-    "At the same time, I collaborate with <\a>Pixey</\a>, working as a fullstack web developer \n" +
-    "If I'm not eating pizza or playing some sport, I spend my time learning about cool stuff and working on personal projects\n\n",
+    now: "I am currently working as a software engineer in the innovation team of <\a>Avaloq</\a> \n" +
+    "If I'm not eating pizza, running, or riding my <\a>BMX</\a>, I spend my time learning about cool stuff and working on personal projects\n\n",
 
     booksObj: modules.booksObject,
 
