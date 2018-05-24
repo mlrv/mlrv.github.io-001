@@ -1,13 +1,6 @@
-/**
- * Created by marco on 06-Apr-17.
- */
-
-var music = {
-
-  play: function () {
+const music = {
+  play: () => {
     document.getElementById('audioPlayer').style.visibility = 'visible'
     return '\n'
   }
-
-
 }

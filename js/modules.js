@@ -1,10 +1,10 @@
-var work = require('./objects/work');
-var books = require('./objects/books');
-var eggs = require('./objects/eggs');
-var thanks = require('./objects/thanks');
-var contact = require('./objects/contact');
+const work = require('./objects/work');
+const books = require('./objects/books');
+const eggs = require('./objects/eggs');
+const thanks = require('./objects/thanks');
+const contact = require('./objects/contact');
 
-var modules = {
+const modules = {
     workObject: work.workObjects,
     booksObject: books.booksObjects,
     eggsObject: eggs.eggsCommands,

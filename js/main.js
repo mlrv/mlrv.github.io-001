@@ -1,10 +1,10 @@
-$(function() {
-    var jqconsole = $('#console').jqconsole('', '> ');
+$(function () {
+    let jqconsole = $('#console').jqconsole('', '> ');
 
     function process(input) {
-        var parsed = input.split(' ');
+        let parsed = input.split(' ');
 
-        switch (parsed[0]) {
+        switch (parsed[0].toLowerCase()) {
             case '?':
             case 'ls':
             case 'help':
@@ -42,20 +42,23 @@ $(function() {
         }
     }
 
-    eggs.unleashTheRabbit();
-
-    var startPrompt = function() {
-        jqconsole.Prompt(true, function(input) {
-            if (input) jqconsole.Write(process(input), 'jqconsole-output', false);
-            else jqconsole.Write(text.notRight, 'jqconsole-output');
+    const startPrompt = function () {
+        jqconsole.Prompt(true, function (input) {
+            if (input) {
+                jqconsole.Write(process(input), 'jqconsole-output', false);
+            } else {
+                jqconsole.Write(text.notRight, 'jqconsole-output');
+            }
             startPrompt();
         });
     };
 
+    eggs.unleashTheRabbit();
+
     startPrompt();
 
-    jqconsole.RegisterShortcut('Z', function() {
+    jqconsole.RegisterShortcut('Z', function () {
         this.Reset();
         startPrompt();
-      });
+    });
 });

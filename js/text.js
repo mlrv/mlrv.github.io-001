@@ -1,6 +1,6 @@
-var modules = require('modules');
+const modules = require('modules');
 
-var text = {
+const text = {
 
     help: function () {
         return 'Try one of these:\n\n' +
@@ -16,14 +16,14 @@ var text = {
     },
 
     whoareyou: "hi, I'm Marco\n" +
-    "software developer @RBS\n" +
+    "software engineer @Avaloq\n" +
     "Genoa (IT) &rarr; Manchester (UK) &rarr; Edinburgh (UK) &rarr; ?\n" +
     "software engineering 💻 artificial intelligence 💭 blockchain 🔑 pizza 🍕\n\n",
 
     workObj: modules.workObject,
 
     exp: function () {
-        var output = 'My work exp:\n\n';
+        let output = 'My work exp:\n\n';
         this.workObj.forEach(function (item) {
             output += ('\t' +
                 item.name +
@@ -46,14 +46,12 @@ var text = {
     },
 
     cv: function () {
-        var win = window.open('docs/Marco_Levrero_CV.pdf', '_blank');
-        win.focus();
+        window.open('docs/Marco_Levrero_CV.pdf', '_blank').focus();
         return '\n'
     },
 
     source: function () {
-        var win = window.open('https://github.com/mlrv/mlrv.github.io', '_blank');
-        win.focus();
+        window.open('https://github.com/mlrv/mlrv.github.io', '_blank').focus()
         return '\n'
     },
 
@@ -63,7 +61,7 @@ var text = {
     booksObj: modules.booksObject,
 
     books: function () {
-        var output = "These are some of the books I've read in the recent years, some of them really opened my mind.\n\n"
+        let output = "These are some of the books I've read in the recent years, some of them really opened my mind.\n\n"
 
         this.booksObj.forEach(function (item) {
             output += '\t' +
@@ -82,8 +80,8 @@ var text = {
     },
 
     eggs: function () {
-        var eggs = modules.eggsObject;
-        var random = Math.floor((Math.random() * eggs.length));
+        const eggs = modules.eggsObject;
+        const random = Math.floor((Math.random() * eggs.length));
         return 'Try typing... ' + eggs[random] + '\n\n'
     },
 
