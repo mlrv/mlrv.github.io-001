@@ -1,5 +1,5 @@
 $(function () {
-    let jqconsole = $('#console').jqconsole('', '> ');
+    let jqconsole = $('#console').jqconsole('', 'λ ');
 
     function process(input) {
         let parsed = input.split(' ');
