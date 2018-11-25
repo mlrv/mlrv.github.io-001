@@ -1,212 +1,172 @@
 <html>
 
 <head>
-    <title>/* mLrv */</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/ansi.css">
-    <script src="./bundle.js"></script>
+  <title>/* mLrv */</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ansi.css">
+  <script src="./bundle.js"></script>
 </head>
 
 <body>
 
-    <!--Here's a train for you. hope you like it.
+  <div id="container" style="position:relative;">
 
-                          (  ) (@@) ( )  (@)  ()    @@    O     @     O     @
-                     (@@@)
-                 (    )
-              (@@@@)
-
-            (   )
-        ====        ________                ___________
-    _D _|  |_______/        \__I_I_____===__|_________|
-     |(_)---  |   H\________/ |   |        =|___ ___|      _________________
-     /     |  |   H  |  |     |   |         ||_| |_||     _|                \___
-    |      |  |   H  |__--------------------| [___] |   =|
-    | ________|___H__/__|_____/[][]~\_______|       |   -|
-    |/ |   |-----------I_____I [][] []  D   |=======|____|______________________
-  __/ =| o |=-~~\  /~~\  /~~\  /~~\ ____Y___________|__|________________________
-   |/-=|___|=O=====O=====O=====O   |_____/~\___/          |_D__D__D_|  |_D__D__D
-    \_/      \__/  \__/  \__/  \__/      \_/               \_/   \_/    \_/   \-->
-
-    <div id="container" style="position:relative;">
-
-        <!--Matrix element, activated with 'matrix'-->
-        <div id="matrix" style="position:absolute; top:0; right:0;">
-            <canvas id="waterfall"></canvas>
-        </div>
-
-        <!--Just spacing-->
-        <div id="just-spacing"></div>
-
-        <!--Auto typing element-->
-        <div id="autoType" class="type-wrap">
-            <div id="typed-strings" style="position:absolute; top:0px; left:0px;">
-                <span>Hello human...</span>
-                <p>You have now been plugged in.</p>
-                <p>This has been built for you...</p>
-                <p>Feel free to have a look around and explore...</p>
-                <p>Type <i>help</i> to get started.</p>
-            </div>
-
-            <div id="typed-stringsOnMobile" style="position:absolute; top:0px; left:0px;">
-                <span>Hello human...</span>
-                <p>You have now been plugged in.</p>
-                <p>This has been built for you...</p>
-                <p>Feel free to have a look around and explore...</p>
-                <p>Type <i>help</i> to get started.</p>
-            </div>
-
-            <span id="typed" style="white-space:pre;"></span>
-        </div>
-
-        <!--Console element-->
-        <div id="console"></div>
-
-        <!--Replaces console on mobile-->
-        <div id="replaceConsoleOnMobile"></div>
-
-        <!--Audio player element + list of songs + shortcuts-->
-        <div id="audioPlayer" style="position:absolute; top:20px; right:20px;">
-            <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" preload="auto"></audio>
-
-            <ol>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/02-juicy-r.mp3">juicy-r</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/03-its-all-about-the-crystalizabeths.mp3">it's all about the crystalizabeths</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/04-islands-is-the-limit.mp3">islands is the limit</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/05-one-more-chance-for-a-heart-to-skip-a-beat.mp3">one more chance for a heart to skip a beat</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/06-suicidal-fantasy.mp3">suicidal fantasy</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/07-everyday-shelter.mp3">everyday shelter</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/08-basic-hypnosis.mp3">basic hypnosis</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/09-infinite-victory.mp3">infinite victory</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>
-            </ol>
-
-        </div>
+    <!--Matrix element, activated with 'matrix'-->
+    <div id="matrix" style="position:absolute; top:0; right:0;">
+      <canvas id="waterfall"></canvas>
     </div>
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-100685537-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/console/jqconsole.min.js"></script>
-    <script src="js/text.js"></script>
-    <script src="js/magic/music.js"></script>
-    <script src="js/magic/matrix.js"></script>
-    <script src="js/magic/eggs.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
-    <script src="js/auto%20typing/typed.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+    <!--Just spacing-->
+    <div id="just-spacing"></div>
 
-            Typed.new("#typed", {
-                stringsElement: document.getElementById('typed-strings'),
-                typeSpeed: 30,
-                backDelay: 500,
-                loop: false,
-                contentType: 'html', // or text
-                // defaults to null for infinite loop
-                loopCount: null,
-                callback: function () {
-                    //
-                },
-                resetCallback: function () {
-                    newTyped();
-                }
-            });
+    <!--Auto typing element-->
+    <div id="autoType" class="type-wrap">
+      <div id="typed-strings" style="position:absolute; top:0px; left:0px;">
+        <span>Hello human...</span>
+        <p>You have now been plugged in.</p>
+        <p>This has been built for you...</p>
+        <p>Feel free to have a look around and explore...</p>
+        <p>Type <i>help</i> to get started.</p>
+      </div>
 
-            var resetElement = document.querySelector('.reset');
-            if (resetElement) {
-                resetElement.addEventListener('click', function () {
-                    document.getElementById('typed')._typed.reset();
-                });
-            }
+      <div id="typed-stringsOnMobile" style="position:absolute; top:0px; left:0px;">
+        <span>Hello human...</span>
+        <p>You have now been plugged in.</p>
+        <p>This has been built for you...</p>
+        <p>Feel free to have a look around and explore...</p>
+        <p>Type <i>help</i> to get started.</p>
+      </div>
 
+      <span id="typed" style="white-space:pre;"></span>
+    </div>
+
+    <!--Console element-->
+    <div id="console"></div>
+
+    <!--Replaces console on mobile-->
+    <div id="replaceConsoleOnMobile"></div>
+
+    <!--Audio player element + list of songs + shortcuts-->
+    <div id="audioPlayer" style="position:absolute; top:20px; right:20px;">
+      <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" preload="auto"></audio>
+
+      <ol>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/02-juicy-r.mp3">juicy-r</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/03-its-all-about-the-crystalizabeths.mp3">it's all about the crystalizabeths</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/04-islands-is-the-limit.mp3">islands is the limit</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/05-one-more-chance-for-a-heart-to-skip-a-beat.mp3">one more chance for a heart to skip a beat</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/06-suicidal-fantasy.mp3">suicidal fantasy</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/07-everyday-shelter.mp3">everyday shelter</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/08-basic-hypnosis.mp3">basic hypnosis</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/09-infinite-victory.mp3">infinite victory</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-100685537-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/console/jqconsole.min.js"></script>
+  <script src="js/text.js"></script>
+  <script src="js/magic/music.js"></script>
+  <script src="js/magic/matrix.js"></script>
+  <script src="js/magic/eggs.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
+  <script src="js/auto%20typing/typed.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      Typed.new("#typed", {
+        stringsElement: document.getElementById('typed-strings'),
+        typeSpeed: 30,
+        backDelay: 500,
+        loop: false,
+        contentType: 'html', // or text
+        // defaults to null for infinite loop
+        loopCount: null,
+        callback: function () {
+          //
+        },
+        resetCallback: function () {
+          newTyped();
+        }
+      });
+
+      var resetElement = document.querySelector('.reset');
+      if (resetElement) {
+        resetElement.addEventListener('click', function () {
+          document.getElementById('typed')._typed.reset();
         });
-    </script>
-    <script src="/audiojs/audio.min.js"></script>
-    <script>
-        $(function () {
-            // Setup the player to autoplay the next track
-            var a = audiojs.createAll({
-                trackEnded: function () {
-                    var next = $('ol li.playing').next();
-                    if (!next.length) next = $('ol li').first();
-                    next.addClass('playing').siblings().removeClass('playing');
-                    audio.load($('a', next).attr('data-src'));
-                    audio.play();
-                }
-            });
+      }
 
-            // Load in the first track
-            var audio = a[0];
-            first = $('ol a').attr('data-src');
-            $('ol li').first().addClass('playing');
-            audio.load(first);
+    });
+  </script>
+  <script src="/audiojs/audio.min.js"></script>
+  <script>
+    $(function () {
+      // Setup the player to autoplay the next track
+      var a = audiojs.createAll({
+        trackEnded: function () {
+          var next = $('ol li.playing').next();
+          if (!next.length) next = $('ol li').first();
+          next.addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', next).attr('data-src'));
+          audio.play();
+        }
+      });
 
-            // Load in a track on click
-            $('ol li').click(function (e) {
-                e.preventDefault();
-                $(this).addClass('playing').siblings().removeClass('playing');
-                audio.load($('a', this).attr('data-src'));
-                audio.play();
-            });
-            // Keyboard shortcuts
-            $(document).keydown(function (e) {
-                var unicode = e.charCode ? e.charCode : e.keyCode;
-                // right arrow
-                if (unicode == 39) {
-                    var next = $('li.playing').next();
-                    if (!next.length) next = $('ol li').first();
-                    next.click();
-                    // back arrow
-                } else if (unicode == 37) {
-                    var prev = $('li.playing').prev();
-                    if (!prev.length) prev = $('ol li').last();
-                    prev.click();
-                    // spacebar
-                } else if (unicode == 32) {
-                    audio.playPause();
-                }
-            })
-        });
-    </script>
+      // Load in the first track
+      var audio = a[0];
+      first = $('ol a').attr('data-src');
+      $('ol li').first().addClass('playing');
+      audio.load(first);
+
+      // Load in a track on click
+      $('ol li').click(function (e) {
+        e.preventDefault();
+        $(this).addClass('playing').siblings().removeClass('playing');
+        audio.load($('a', this).attr('data-src'));
+        audio.play();
+      });
+      // Keyboard shortcuts
+      $(document).keydown(function (e) {
+        var unicode = e.charCode ? e.charCode : e.keyCode;
+        // right arrow
+        if (unicode == 39) {
+          var next = $('li.playing').next();
+          if (!next.length) next = $('ol li').first();
+          next.click();
+          // back arrow
+        } else if (unicode == 37) {
+          var prev = $('li.playing').prev();
+          if (!prev.length) prev = $('ol li').last();
+          prev.click();
+          // spacebar
+        } else if (unicode == 32) {
+          audio.playPause();
+        }
+      })
+    });
+  </script>
 </body>
-
-<!--
-    
- _________________________________________
-/ Q: What lies on the bottom of the ocean \
-\ and twitches? A: A nervous wreck.       /
- -----------------------------------------
-\                             .       .
- \                           / `.   .' " 
-  \                  .---.  <    > <    >  .---.
-   \                 |    \  \ - ~ ~ - /  /    |
-         _____          ..-~             ~-..-~
-        |     |   \~~~\.'                    `./~~~/
-       ---------   \__/                        \__/
-      .'  O    \     /               /       \  " 
-     (_____,    `._.'               |         }  \/~~~/
-      `----.          /       }     |        /    \__/
-            `-.      |       /      |       /      `. ,~~|
-                ~-.__|      /_ - ~ ^|      /- _      `..-'   
-                     |     /        |     /     ~-.     `-. _  _  _
-                     |_____|        |_____|         ~ - . _ _ _ _ _>-->
 
 </html>
