@@ -7,16 +7,10 @@ module.exports = {
             time: 'Feb 2018 &rarr; Present'
         },
         {
-            name: 'Software Engineer',
+            name: 'Innovation Consultant & Software Engineer',
             company: 'RBS',
             url: 'http://www.bankofapis.com/',
-            time: 'May 2017 &rarr; Feb 2018'
-        },
-        {
-            name: 'Innovation Consultant',
-            company: 'RBS',
-            url: 'http://personal.rbs.co.uk/',
-            time: 'Sep 2016 &rarr; May 2017'
+            time: 'Sep 2016 &rarr; Feb 2018'
         },
         {
             name: 'Project Manager',

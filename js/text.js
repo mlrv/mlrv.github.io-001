@@ -52,8 +52,10 @@ const text = {
   },
 
   source: function () {
-    window.open('https://github.com/mlrv/mlrv.github.io', '_blank').focus()
-    return '\n'
+    return `
+      This website was built a long time ago unsing vanilla JS...
+      If you are interested in the source code you can find it <a target='_blank' href='https://github.com/mlrv/mlrv.github.io'>here</a>
+      \n`;
   },
 
   now: "I am currently working as a software engineer in the innovation team of <\a>Avaloq</\a> \n" +
