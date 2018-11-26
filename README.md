@@ -1,6 +1,6 @@
 # mlrv.github.io :space_invader:
 
-This is my personal website, powered by [jqconsole](https://github.com/replit/jq-console). A big thanks goes to btroo (https://github.com/btroo), who truly inspired me with his work, the idea of this website is based on his work.
+This is my personal website, powered by [jqconsole](https://github.com/replit/jq-console). A big thanks goes to [btroo](https://github.com/btroo), the idea of this website is based on his work.
 
 ## Setup :wrench:
 To run it locally, clone it somewhere on your pc with: 

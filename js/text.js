@@ -54,7 +54,7 @@ const text = {
   source: function () {
     return `
       This website was built a long time ago unsing vanilla JS...
-      If you are interested in the source code you can find it <a target='_blank' href='https://github.com/mlrv/mlrv.github.io'>here</a>
+      I don't really maintain it anymore, but if you are interested in the source code you can find it <a target='_blank' href='https://github.com/mlrv/mlrv.github.io'>here</a>
       \n`;
   },
 
