@@ -13,6 +13,8 @@ $(function () {
         return text.whoareyou;
       case 'exp':
         return text.exp();
+			case 'dotfiles':
+				return text.dotfiles();
       case 'cv':
         return text.cv();
       case 'source':

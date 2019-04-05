@@ -7,6 +7,7 @@ const text = {
       '\t<\a>whoareyou</\a>: curious? 💬 \n\n' +
       "\t<\a>exp</\a>: previous experience 📃\n\n" +
       '\t<\a>now</\a>: what I am doing right now 🕒\n\n' +
+      '\t<\a>dotfiles</\a>: my deepest secrets 👀\n\n' +
       '\t<\a>music</\a>: need some company while browsing? 🎺\n\n' +
       '\t<\a>books</\a>: my personal recommendations 📚\n\n' +
       '\t<\a>eggs</\a>: easter eggs 🎲\n\n' +
@@ -45,6 +46,10 @@ const text = {
 
     return output
   },
+
+	dotfiles: function() {
+		window.open('https://github.com/mlrv/dotfiles', '_blank').focus();	
+	},
 
   cv: function () {
     window.open('docs/Marco_Levrero_CV.pdf', '_blank').focus();
