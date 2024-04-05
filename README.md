@@ -5,7 +5,7 @@ This is my personal website, powered by [jqconsole](https://github.com/replit/jq
 ## Setup :wrench:
 To run it locally, clone it somewhere on your pc with: 
 ```javascript
-git clone https://github.com/mlrv/mlrv.github.io.git
+git clone git@github.com:mlrv/mlrv.github.io-001.git
 ```
 I highly suggest installing [live-server](https://github.com/tapio/live-server), a little development server with live reload capability.
 ```javascript
